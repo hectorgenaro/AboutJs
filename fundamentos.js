@@ -16,7 +16,7 @@ var erick = {
 
 function imprimeNombreYEdad({ nombre, apellido, edad, ocupacion, estadoCivil }) {
   console.log(nombre.toUpperCase())
-  console.log(apellido.toUpperCase())
+  // console.log(apellido.toUpperCase())
   console.log(edad)
   console.log(ocupacion.toUpperCase())
   console.log(estadoCivil.toUpperCase())
@@ -25,4 +25,4 @@ function imprimeNombreYEdad({ nombre, apellido, edad, ocupacion, estadoCivil }) 
 
 imprimeNombreYEdad(erick)
 imprimeNombreYEdad(hector)
-imprimeNombreYEdad({ nombre: 'pepito'})
+// imprimeNombreYEdad({ nombre: 'pepito'})
