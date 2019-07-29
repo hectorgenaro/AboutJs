@@ -16,6 +16,7 @@ function texto()
 if(texto())
 {
 	alert("Esto es palíndromo");
-}else{
+}
+else{
 	alert("Esto no es palíndromo")
 }
