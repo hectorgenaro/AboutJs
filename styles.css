@@ -1,0 +1,11 @@
+*{
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("images/lluvia.jpg");
+  text-align: center;
+  color: #ffff;
+  max-width: auto;
+
+}
