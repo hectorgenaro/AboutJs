@@ -56,10 +56,6 @@ console.log(exp())
 for (let r = '%'; r.length < 8; r = r + '%') {
   console.log(r)
 }
-for (let c = 1; c < 13; c++) {
-  console.log(c)
-}
-
 
 // ========= FIZZBUZZ program ============
 for (let i = 1; i < 101; i++) {
@@ -85,7 +81,7 @@ for (let i = 1; i < 101; i++) {
 
 
 // ============ CHESS BOARD =============
-let size = 20;
+let size = 4;
 let tablero = " "
 for (let y = 0; y < size; y++) {
   for (let x = 0; x < size; x++) {
@@ -100,6 +96,7 @@ for (let y = 0; y < size; y++) {
 
 }
 console.log(tablero);
+
 
 // =========== Problema corredores =========
 // De cuatro corredores de atletismo se sabe que C a llegado inmediatamente detras de B,
