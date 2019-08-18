@@ -9,3 +9,10 @@ body {
   max-width: auto;
   background-size: cover;
 }
+ button{
+  background: #95cdff;
+  width: 120px;
+  height: 40px;
+  color:#ffff;
+
+ }
