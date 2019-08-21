@@ -139,17 +139,17 @@
       }, 5)
     }
 
-    function list (){
-    let palabra = prompt('escribe una palabra \n te la mostrare caracter por caracter')
-    palabra = palabra.replace(/ /g, "")
-    if (palabra===""){
+    function list() {
+      let palabra = prompt('escribe una palabra \n te la mostrare caracter por caracter')
+      palabra = palabra.replace(/ /g, "")
+      if (palabra === "") {
+        list()
+      }
+      for (let i = 0; i < palabra.length; i++) {
+        alert(palabra[i])
+      }
+    }
     list()
-    }
-    for (let i = 0; i < palabra.length; i++) {
-      alert(palabra[i])
-    }
-  }
-  list ()
 
     const myArray = [6, 19, 20];
     const yourArray = [19, 81, 2];
@@ -165,7 +165,7 @@
     function palindrome(str) {
 
       str = prompt('Escribe algo te dire si es un palindromo')
-      if (str===null || str==="") {
+      if (str === null || str === "") {
         palindrome()
       }
       str = str.replace(/ /g, "").toLowerCase()
@@ -178,4 +178,15 @@
     }
     palindrome()
     alert('NOW CHECK THE CONSOLE OF THIS BROWSER')
+
+    function adjacentElementsProduct(inputArray) {
+      var max = inputArray[0] * inputArray[1]
+      for (let i = 0; i <= inputArray.length; i++) {
+        if (inputArray[i] * inputArray[i + 1] > max) {
+        return  max = inputArray[i] * inputArray[i + 1]
+        }
+      }
+      return max
+    }
+    console.log(adjacentElementsProduct(1,2))
   });
