@@ -212,3 +212,14 @@ function cambioSeleccion() {
     }
   }
 }
+
+function again(){
+  let x= document.getElementById('some')
+  let y= document.getElementById('ap').innerHTML=x.value;
+  console.log(y);
+}
+
+  function cls (){
+  let z= document.getElementById('ap')
+  z.innerHTML=""
+}
