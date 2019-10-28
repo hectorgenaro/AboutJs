@@ -200,3 +200,15 @@ else{
 }
 console.log(factorial(24))
   });
+
+function cambioSeleccion() {
+  let cambio = document.getElementsByName('test')
+  console.log(cambio)
+  for (let i = 0; i < cambio.length; i++) {
+
+    if (cambio[i].checked) {
+      let res=cambio[i].value;
+    document.getElementById('respuesta').innerHTML=res;
+    }
+  }
+}
