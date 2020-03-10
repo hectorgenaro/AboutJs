@@ -226,9 +226,10 @@ function again(){
 
 function platziStr(){
   var nombre = prompt('Te dire la ultima letra de tu Nombre \n Escribe tu nombre')
-  if (nombre){
-    numL = nombre.length
-    lastL = nombre.charAt(numL-1)
+  var str = nombre.trim()
+  if (str){
+    numL = str.length
+    lastL = str.charAt(numL-1)
     alert('la ultima letra de tu nombre es:' + " " + lastL)
   }else{
     alert("no puedes dejar tu nombre en blanco")
