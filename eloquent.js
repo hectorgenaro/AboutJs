@@ -229,32 +229,57 @@ function again(){
   z.innerHTML=""
 }
 
-function platziStr(){
-  var nombre = prompt('Te dire la ultima letra de tu Nombre \n Escribe tu nombre')
-  if (nombre){
-    var str = nombre.trim()
-    numL = str.length
-    lastL = str.charAt(numL-1)
-    alert('la ultima letra de tu nombre es:' + " " + lastL)
-  }else{
-    alert("no puedes dejar tu nombre en blanco")
-     platziStr()
-   }
- }
-var genaro = {
-  nombre: 'genaro',
-  apellido: 'rodriguez',
-  edad: 34
+
+ function platzi() {
+
+   function platziStr(){
+     var nombre = prompt('Te dire la ultima letra de tu Nombre \n Escribe tu nombre')
+     if (nombre){
+       var str = nombre.trim()
+       numL = str.length
+       lastL = str.charAt(numL-1)
+       alert(`la ultima letra de tu nombre es: ${lastL}`)
+     }else{
+       alert("no puedes dejar tu nombre en blanco")
+        platziStr()
+      }
+    }
+
+
+  var genaro = {
+    nombre: 'genaro',
+    apellido: 'rodriguez',
+    edad: 34,
+    ingeniero: true,
+    cocinero: false,
+    dj: false,
+    bajista: true,
+    drone: false
+  }
+  var pedro = {
+    nombre: 'pedro',
+    apellido: 'mendez',
+    edad: 17
+  }
+
+  function imprimeNombreYEdad(persona) {
+    var nombre = persona.nombre
+    var edad = persona.edad
+    console.log(`hola me llamo ${persona.nombre} y tengo ${persona.edad} años`)
+  }
+  imprimeNombreYEdad(genaro)
+  imprimeNombreYEdad(pedro)
+
+
+  function imprimirSiEsMayorDeEdad(persona) {
+    console.log(`${persona.nombre}: `)
+    if (persona.edad >= 18) {
+      console.log('es mayor de edad')
+    } else {
+      console.log('no es mayor de edad')
+    }
+  }
+  imprimirSiEsMayorDeEdad(genaro)
+  imprimirSiEsMayorDeEdad(pedro)
+  platziStr()
 }
-var pedro = {
-  nombre: 'pedro',
-  apellido: 'mendez',
-  edad:32
-}
-function imprimeNombreYEdad (persona){
-  var nombre = persona.nombre
-  var edad = persona.edad
-  console.log('hola me llamo' + ' ' + nombre + ' ' + 'y tengo' + ' ' + edad + ' ' + 'años')
-}
-imprimeNombreYEdad(genaro)
-imprimeNombreYEdad(pedro)
