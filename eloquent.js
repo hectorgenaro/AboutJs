@@ -6,7 +6,7 @@
       yourName = prompt("Who are you?");
     }
     while (!yourName)
-    alert('thanks' + ' ' + yourName);
+    alert('Welcome' + ' ' + yourName);
 
     // ======= calcula el cuadrado de un numero=====
     function square(n) {
@@ -231,8 +231,8 @@ function again(){
 
 function platziStr(){
   var nombre = prompt('Te dire la ultima letra de tu Nombre \n Escribe tu nombre')
-  var str = nombre.trim()
-  if (str){
+  if (nombre){
+    var str = nombre.trim()
     numL = str.length
     lastL = str.charAt(numL-1)
     alert('la ultima letra de tu nombre es:' + " " + lastL)
