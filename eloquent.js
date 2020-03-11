@@ -215,8 +215,13 @@ function cambioSeleccion() {
 
 function again(){
   let x= document.getElementById('some')
-  let y= document.getElementById('ap').innerHTML=x.value;
+  let y= document.getElementById('ap').innerHTML = x.value;
   console.log(y);
+  if(x.value != ""){
+    x.value = ""
+  }else{
+    x.value = y
+  }
 }
 
   function cls (){
@@ -236,3 +241,20 @@ function platziStr(){
      platziStr()
    }
  }
+var genaro = {
+  nombre: 'genaro',
+  apellido: 'rodriguez',
+  edad: 34
+}
+var pedro = {
+  nombre: 'pedro',
+  apellido: 'mendez',
+  edad:32
+}
+function imprimeNombreYEdad (persona){
+  var nombre = persona.nombre
+  var edad = persona.edad
+  console.log('hola me llamo' + ' ' + nombre + ' ' + 'y tengo' + ' ' + edad + ' ' + 'años')
+}
+imprimeNombreYEdad(genaro)
+imprimeNombreYEdad(pedro)
