@@ -11,7 +11,7 @@
     // ======= calcula el cuadrado de un numero=====
     function square(n) {
       let theNumber = Number(prompt("Pick a number"));
-      if (theNumber == null || theNumber == "") {
+      if (theNumber == null || theNumber == "" || theNumber == undefined ) {
         square()
       } else if (!Number.isNaN(theNumber)) {
         alert("Your number is the square root of " +
@@ -141,14 +141,16 @@
 
     function list() {
       let palabra = prompt('escribe una palabra \n te la mostrare caracter por caracter')
-      palabra = palabra.replace(/ /g, "")
-      if (palabra === "") {
+
+      if (palabra === "" || palabra === null) {
         list()
-      }
+      }else{
+      palabra = palabra.replace(/ /g, "")
       for (let i = 0; i < palabra.length; i++) {
         alert(palabra[i])
       }
     }
+  }
     list()
 
     const myArray = [6, 19, 20];
@@ -247,8 +249,8 @@ function again(){
 
 
   var genaro = {
-    nombre: 'genaro',
-    apellido: 'rodriguez',
+    nombre: 'Genaro',
+    apellido: 'Rodriguez',
     edad: 34,
     ingeniero: true,
     cocinero: false,
@@ -257,8 +259,8 @@ function again(){
     drone: false
   }
   var pedro = {
-    nombre: 'pedro',
-    apellido: 'mendez',
+    nombre: 'Pedro',
+    apellido: 'Mendez',
     edad: 17
   }
 
@@ -270,16 +272,37 @@ function again(){
   imprimeNombreYEdad(genaro)
   imprimeNombreYEdad(pedro)
 
+  // const imprimirSiEsMayorDeEdad = function imprimirSiEsMayorDeEdad(persona) {
+  //   if (persona.edad >= 18) {
+  //     console.log(`${persona.nombre}: es mayor de edad`)
+  //   } else {
+  //     console.log(`${persona.nombre}: no es mayor de edad`)
+  //   }
+  // }
+  const MAYOR_EDAD = 18
+  var esMayorDeEdad = persona => persona.edad >= MAYOR_EDAD
 
-  function imprimirSiEsMayorDeEdad(persona) {
-    console.log(`${persona.nombre}: `)
-    if (persona.edad >= 18) {
-      console.log('es mayor de edad')
+  // misma funcion pero como arrow function
+  const imprimirSiEsMayorDeEdad = persona => {
+    if (esMayorDeEdad(persona)) {
+      console.log(`${persona.nombre}: es mayor de edad`)
     } else {
-      console.log('no es mayor de edad')
+      console.log(`${persona.nombre}: no es mayor de edad`)
     }
   }
+
+  const esMenorDeEdad = persona => !esMayorDeEdad(persona)
+  const imprimeEsMenorDeEdad = persona => {
+  if (esMenorDeEdad(persona)) {
+    console.log(`${persona.nombre}: acceso denegado`)
+  } else {
+    console.log(`${persona.nombre}: acceso permitido`)
+  }
+}
+
   imprimirSiEsMayorDeEdad(genaro)
   imprimirSiEsMayorDeEdad(pedro)
+  imprimeEsMenorDeEdad(genaro)
+  imprimeEsMenorDeEdad(pedro)
   platziStr()
 }
