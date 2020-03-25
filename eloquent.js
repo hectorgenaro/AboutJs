@@ -234,18 +234,18 @@ function again(){
 
  function platzi() {
 
-   // function platziStr(){
-   //   var nombre = prompt('Te dire la ultima letra de tu Nombre \n Escribe tu nombre')
-   //   if (nombre){
-   //     var str = nombre.trim()
-   //     numL = str.length
-   //     lastL = str.charAt(numL-1)
-   //     alert(`la ultima letra de tu nombre es: ${lastL}`)
-   //   }else{
-   //     alert("no puedes dejar tu nombre en blanco")
-   //      platziStr()
-   //    }
-   //  }
+   function platziStr(){
+     var nombre = prompt('Te dire la ultima letra de tu Nombre \n Escribe tu nombre')
+     if (nombre){
+       var str = nombre.trim()
+       numL = str.length
+       lastL = str.charAt(numL-1)
+       alert(`la ultima letra de tu nombre es: ${lastL}`)
+     }else{
+       alert("no puedes dejar tu nombre en blanco")
+        platziStr()
+      }
+    }
 
 
   var genaro = {
@@ -306,7 +306,7 @@ function again(){
   imprimirSiEsMayorDeEdad(pedro)
   imprimeEsMenorDeEdad(genaro)
   imprimeEsMenorDeEdad(pedro)
-  // platziStr()
+  platziStr()
 
   console.log(`Al inicio del año ${genaro.nombre} pesa ${genaro.peso}kg`)
   const INCREMENTO_PESO = 0.2
