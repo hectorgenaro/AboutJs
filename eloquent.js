@@ -234,18 +234,18 @@ function again(){
 
  function platzi() {
 
-   function platziStr(){
-     var nombre = prompt('Te dire la ultima letra de tu Nombre \n Escribe tu nombre')
-     if (nombre){
-       var str = nombre.trim()
-       numL = str.length
-       lastL = str.charAt(numL-1)
-       alert(`la ultima letra de tu nombre es: ${lastL}`)
-     }else{
-       alert("no puedes dejar tu nombre en blanco")
-        platziStr()
-      }
-    }
+   // function platziStr(){
+   //   var nombre = prompt('Te dire la ultima letra de tu Nombre \n Escribe tu nombre')
+   //   if (nombre){
+   //     var str = nombre.trim()
+   //     numL = str.length
+   //     lastL = str.charAt(numL-1)
+   //     alert(`la ultima letra de tu nombre es: ${lastL}`)
+   //   }else{
+   //     alert("no puedes dejar tu nombre en blanco")
+   //      platziStr()
+   //    }
+   //  }
 
 
   var genaro = {
@@ -256,7 +256,9 @@ function again(){
     cocinero: false,
     dj: false,
     bajista: true,
-    drone: false
+    drone: false,
+    edad: 34,
+    peso: 70
   }
   var pedro = {
     nombre: 'Pedro',
@@ -304,5 +306,20 @@ function again(){
   imprimirSiEsMayorDeEdad(pedro)
   imprimeEsMenorDeEdad(genaro)
   imprimeEsMenorDeEdad(pedro)
-  platziStr()
+  // platziStr()
+
+  console.log(`Al inicio del año ${genaro.nombre} pesa ${genaro.peso}kg`)
+  const INCREMENTO_PESO = 0.2
+  const aumentaDePeso = persona => persona.peso += INCREMENTO_PESO
+  const bajaDePeso = persona => persona.peso -= INCREMENTO_PESO
+
+  for(i=1; i<=365; i++){
+    var random = Math.random()
+    if(random < 0.25){
+      aumentaDePeso(genaro);
+    } else if (random < 0.50){
+      bajaDePeso(genaro);
+    }
+  }
+  console.log(`Al final del año ${genaro.nombre} pesa ${genaro.peso.toFixed(1)}kg`)
 }
