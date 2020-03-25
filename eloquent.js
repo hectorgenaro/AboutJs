@@ -215,6 +215,7 @@ function cambioSeleccion() {
   }
 }
 
+
 function again(){
   let x= document.getElementById('some')
   let y= document.getElementById('ap').innerHTML = x.value;
@@ -225,6 +226,14 @@ function again(){
     x.value = y
   }
 }
+
+function enter($event){
+  var keyCode = $event.which || $event.keyCode;
+  if (keyCode === 13) {
+    again();
+  }
+}
+
 
   function cls (){
   let z= document.getElementById('ap')
