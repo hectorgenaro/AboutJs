@@ -315,20 +315,32 @@ function enter($event){
   imprimirSiEsMayorDeEdad(pedro)
   imprimeEsMenorDeEdad(genaro)
   imprimeEsMenorDeEdad(pedro)
-  platziStr()
+  // platziStr()
 
   console.log(`Al inicio del año ${genaro.nombre} pesa ${genaro.peso}kg`)
-  const INCREMENTO_PESO = 0.2
+  const INCREMENTO_PESO = 0.3
   const aumentaDePeso = persona => persona.peso += INCREMENTO_PESO
   const bajaDePeso = persona => persona.peso -= INCREMENTO_PESO
-
-  for(i=1; i<=365; i++){
-    var random = Math.random()
-    if(random < 0.25){
-      aumentaDePeso(genaro);
-    } else if (random < 0.50){
-      bajaDePeso(genaro);
+  const comeMucho = () => Math.random() < 0.3
+  const ejercita = () => Math.random() < 0.4
+  // for(i=1; i<=365; i++){
+  //   var random = Math.random()
+  //   if(random < 0.25){
+  //     aumentaDePeso(genaro);
+  //   } else if (random < 0.50){
+  //     bajaDePeso(genaro);
+  //   }
+  // }
+  const META = genaro.peso - 3
+  var dias = 0
+  while(genaro.peso > META){
+    if(ejercita()){
+      bajaDePeso(genaro)
     }
+    if(comeMucho()){
+    aumentaDePeso(genaro)
+    }
+    dias += 1
   }
-  console.log(`Al final del año ${genaro.nombre} pesa ${genaro.peso.toFixed(1)}kg`)
+  console.log(`Pasaron ${dias} dias haste que ${genaro.nombre} adelgazo 3kg`)
 }
