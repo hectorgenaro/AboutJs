@@ -315,7 +315,7 @@ function enter($event){
   imprimirSiEsMayorDeEdad(pedro)
   imprimeEsMenorDeEdad(genaro)
   imprimeEsMenorDeEdad(pedro)
-  platziStr()
+  // platziStr()
 
   console.log(`Al inicio del año ${genaro.nombre} pesa ${genaro.peso}kg`)
   const INCREMENTO_PESO = 0.3
@@ -342,5 +342,9 @@ function enter($event){
     }
     dias += 1
   }
-  console.log(`Pasaron ${dias} dias haste que ${genaro.nombre} adelgazo 3kg`)
+  if (dias==1){
+    console.log(`Pasaron ${dias} dia haste que ${genaro.nombre} adelgazo 3kg`)
+  }else{
+    console.log(`Pasaron ${dias} dias haste que ${genaro.nombre} adelgazo 3kg`)
+  }
 }
