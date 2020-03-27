@@ -315,7 +315,7 @@ function enter($event){
   imprimirSiEsMayorDeEdad(pedro)
   imprimeEsMenorDeEdad(genaro)
   imprimeEsMenorDeEdad(pedro)
-  // platziStr()
+  platziStr()
 
   console.log(`Al inicio del año ${genaro.nombre} pesa ${genaro.peso}kg`)
   const INCREMENTO_PESO = 0.3
